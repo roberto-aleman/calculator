@@ -22,6 +22,11 @@ operandBtns.forEach((button) => {
 // Operators
 const handleOperatorClick = (event) => {
     const button = event.target;
+    if (operand2) {
+        operate();
+        operand1 = parseInt(display.textContent);
+        operand2 = 0;
+    }
     operator = button.textContent;
 };
 const operatorBtns = document.querySelectorAll(".operator");
